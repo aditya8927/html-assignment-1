@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Student Timetable (Combined)</title>
+    
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f7;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #1a73e8; 
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden; 
+        }
+
+        
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 15px 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: 0.95em;
+        }
+
+        
+        thead th {
+            background-color: #1a73e8;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        
+        .time-slot {
+            background-color: #f7f9fa;
+            font-weight: bold;
+            color: #555;
+            width: 15%; 
+            font-size: 1em;
+        }
+        
+        
+        tbody tr:nth-child(even):not(.break-row) {
+            background-color: #f9f9f9;
+        }
+
+        
+        tbody tr:not(.break-row):hover {
+            background-color: #e8f0fe;
+        }
+
+        
+        .break-row th, .break-row td {
+            background-color: #fbbc05; 
+            font-style: italic;
+            font-weight: bold;
+            color: #202124;
+            padding: 18px 10px;
+        }
+
+        .break-row td {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        
+        .math { background-color: #e6f7ff; }
+        .eng { background-color: #fff0e6; } 
+        .sci { background-color: #e6ffe6; } 
+        .hist { background-color: #ffe6e6; } 
+        .art { background-color: #f5e6ff; } 
+        .comp { background-color: #f0e6ff; } 
+        .pe { background-color: #ffffe6; } 
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Weekly Student Timetable</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time/Day</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="time-slot">09:00 - 10:00</th>
+                    <td class="math">Mathematics</td>
+                    <td class="eng">English</td>
+                    <td class="sci">Science</td>
+                    <td class="hist">History</td>
+                    <td class="art">Art</td>
+                </tr>
+                <tr>
+                    <th class="time-slot">10:00 - 11:00</th>
+                    <td class="sci">Physics</td>
+                    <td class="sci">Chemistry</td>
+                    <td class="math">Mathematics</td>
+                    <td class="eng">English</td>
+                    <td class="sci">Biology</td>
+                </tr>
+                <tr class="break-row">
+                    <th class="time-slot">11:00 - 11:30</th>
+                    <td colspan="5">*** RECESS BREAK ***</td>
+                </tr>
+                <tr>
+                    <th class="time-slot">11:30 - 12:30</th>
+                    <td class="hist">Geography</td>
+                    <td class="comp">Computer Science</td>
+                    <td class="eng">English</td>
+                    <td class="pe">Physical Ed.</td>
+                    <td class="math">Mathematics</td>
+                </tr>
+                <tr class="break-row">
+                    <th class="time-slot">12:30 - 01:30</th>
+                    <td colspan="5">*** LUNCH BREAK ***</td>
+                </tr>
+                <tr>
+                    <th class="time-slot">01:30 - 02:30</th>
+                    <td class="math">Mathematics</td>
+                    <td class="hist">History</td>
+                    <td class="sci">Science</td>
+                    <td class="art">Art</td>
+                    <td class="comp">Computer Science</td>
+                </tr>
+                <tr>
+                    <th class="time-slot">02:30 - 03:30</th>
+                    <td class="eng">English</td>
+                    <td class="sci">Biology</td>
+                    <td class="pe">Physical Ed.</td>
+                    <td class="math">Mathematics</td>
+                    <td class="hist">History</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
